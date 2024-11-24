@@ -83,6 +83,7 @@ The app uses Redux for global state management of tasks, while Context API is ut
 The app should now be available at http://localhost:3000.
 
 ## **Folder Structure**
+```bash
 src/
   ├── components/
   │   ├── AddTask.tsx         # Component for adding new tasks
@@ -96,14 +97,17 @@ src/
   ├── App.tsx                 # Main application component
   ├── index.tsx               # Entry point of the application
   └── index.css               # Global styles
+  ```
 
 ## **State Management Approach**
 This app uses both *Redux* and *Context API* for state management:
+
 **1. Redux:**
     Redux is used to manage the core task state globally (task list, adding, toggling, and deleting tasks).
     taskSlice.ts contains:
         - Reducers for handling task actions (add, toggle, delete).
         - Actions dispatched to update the task state.
+
 **2. Context API:**
     The Context API is used for managing temporary or UI-related states:
     - It could be used for form input management, current filter selection, or managing state that doesn’t need to persist across components or sessions.
