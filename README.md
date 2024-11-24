@@ -66,14 +66,20 @@ The app uses Redux for global state management of tasks, while Context API is ut
 
 ## Setting Up the Development Environment
 1. Clone the repository:
-    ```git clone https://github.com/your-username/task-management-app.git
+    ```
+    git clone https://github.com/your-username/task-management-app.git
     cd task-management-app
+    ```
 2. Install dependencies:
     Make sure you have Node.js and npm installed. Then, run:
-    `npm install
+    ```
+    npm install
+    ```
 3. Start the application:
     After the dependencies are installed, run the following command to start the development server:
-    `npm start
+    ```
+    npm start
+    ```
 The app should now be available at http://localhost:3000.
 
 ## **Folder Structure**
