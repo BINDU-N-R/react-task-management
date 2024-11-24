@@ -44,3 +44,51 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# **Developer Instructions**
+## Overview
+
+This application allows users to manage tasks with features to:
+1. Add new tasks
+2. Toggle task completion
+3. Delete tasks
+4. Filter tasks based on their completion status (All, Active, Completed)
+
+The app uses Redux for global state management of tasks, while Context API is utilized to manage some additional state or provide flexibility for certain components (like managing form input or task display).
+
+## **Tech Stack:**
+**Frontend:** React (with functional components and React hooks)
+**State Management:**
+- **Redux:** Used for global state management (task data).
+- **Context API:** Used for managing additional state (like UI-related states or temporary form data).
+**Styling:** Bootstrap (for layout and styling)
+**TypeScript:** Strong typing for better development experience
+
+## Setting Up the Development Environment
+1. Clone the repository:
+    ```git clone https://github.com/your-username/task-management-app.git
+    ```cd task-management-app
+2. Install dependencies:
+    Make sure you have Node.js and npm installed. Then, run:
+    ```npm install
+3. Start the application:
+    After the dependencies are installed, run the following command to start the development server:
+    ```npm start
+The app should now be available at http://localhost:3000.
+
+## **Folder Structure**
+    ```src/
+  ├── components/
+  │   ├── AddTask.tsx         # Component for adding new tasks
+  │   ├── Filter.tsx          # Component for filtering tasks (Active, Completed, All)
+  │   ├── TaskList.tsx        # Component for displaying tasks
+  ├── context/
+  │   ├── TaskProvider.tsx    # Context provider for managing task data globally
+  ├── redux/
+  │   ├── store.ts            # Redux store setup
+  │   ├── taskSlice.ts        # Redux slice to manage tasks (actions, reducers)
+  ├── App.tsx                 # Main application component
+  ├── index.tsx               # Entry point of the application
+  └── index.css               # Global styles
+
+
