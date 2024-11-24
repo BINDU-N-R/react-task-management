@@ -67,17 +67,17 @@ The app uses Redux for global state management of tasks, while Context API is ut
 ## Setting Up the Development Environment
 1. Clone the repository:
     ```git clone https://github.com/your-username/task-management-app.git
-    ```cd task-management-app
+    cd task-management-app
 2. Install dependencies:
     Make sure you have Node.js and npm installed. Then, run:
-    ```npm install
+    `npm install
 3. Start the application:
     After the dependencies are installed, run the following command to start the development server:
-    ```npm start
+    `npm start
 The app should now be available at http://localhost:3000.
 
 ## **Folder Structure**
-    ```src/
+src/
   ├── components/
   │   ├── AddTask.tsx         # Component for adding new tasks
   │   ├── Filter.tsx          # Component for filtering tasks (Active, Completed, All)
@@ -91,4 +91,14 @@ The app should now be available at http://localhost:3000.
   ├── index.tsx               # Entry point of the application
   └── index.css               # Global styles
 
-
+## **State Management Approach**
+This app uses both *Redux* and *Context API* for state management:
+**1. Redux:**
+    Redux is used to manage the core task state globally (task list, adding, toggling, and deleting tasks).
+    taskSlice.ts contains:
+        - Reducers for handling task actions (add, toggle, delete).
+        - Actions dispatched to update the task state.
+**2. Context API:**
+    The Context API is used for managing temporary or UI-related states:
+    - It could be used for form input management, current filter selection, or managing state that doesn’t need to persist across components or sessions.
+    - TaskProvider.tsx provides task-related context to the app, making it easier to manage and access shared task-related state.
