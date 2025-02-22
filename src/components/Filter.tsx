@@ -15,6 +15,7 @@ const Filter: React.FC = () => {
       ? tasks.filter((task) => !task.completed)
       : tasks.filter((task) => task.completed);
 
+      
   return (
     <div>
       {/* Filter Buttons */}
